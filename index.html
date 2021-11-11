@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store UI</title>
+    <script src="https://kit.fontawesome.com/eb5105679e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/flickity.css" class="css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="category-option">
+                Browse Category
+                <i class="category-option__icon fas fa-chevron-down"></i>
+            </div>
+            <div class="search-box">
+                <i class="search-box__icon fas fa-search"></i>
+                <input type="text" name="" placeholder="Search Book" id="" class="search-box__input">
+            </div>
+            <div class="header-title">
+                read<b>books</b>
+            </div>
+            <div class="account notification">
+                <div class="account__avatar" style="background-image: url(./assets/img/account/avatar/63.jpg);"></div>
+            </div>
+            <div class="menu">
+                <i class="menu__icon fas fa-bars"></i>
+                Menu
+            </div>
+        </div>
+        <div class="book-slide" id="bs-1">
+            <div class="book js-flickity flickity-enabled is-draggable">
+                <div class="flickity-viewport" style="height: 250px;">
+                    <div class="flickity-slider">
+                        <!-- <div class="book-cell is-selected" id="bs-1-bc-1" style="--background-book-cell: #fbadaf">
+                            <div class="book-img">
+                                <img src="./assets/img/books/bigMagic.jpg" alt="" draggable="false" class="book-photo">
+                            </div>
+                            <div class="book-content">
+                                <div class="book-title">BIG MAGIC</div>
+                                <div class="book-author">by Elizabeth Gilbert</div>
+                                <div class="book-rate">
+                                    <fieldset class="rating">
+                                        <input type="checkbox" name="rating" id="bs-1-bc-1-star5" value="5">
+                                        <label for="bs-1-bc-1-star5" class="full">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-1-star4" value="4">
+                                        <label for="bs-1-bc-1-star4" class="4">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-1-star3" value="3">
+                                        <label for="bs-1-bc-1-star3" class="3">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-1-star2" value="2">
+                                        <label for="bs-1-bc-1-star2" class="2">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-1-star1" value="1">
+                                        <label for="bs-1-bc-1-star1" class="1">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                    </fieldset>
+                                    <span class="book-votes">1.987 voters</span>
+                                </div>
+                                <span class="book-sum">Readers of all ages and walks of life have drawn inspiration and empowerment from Elizabeth Gilbert’s books for years.</span>
+                                <div class="book-see">
+                                    <span>See The Book</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-cell" id="bs-1-bc-2" style="--background-book-cell: #a4dfea">
+                            <div class="book-img">
+                                <img src="./assets/img/books/bigMagic.jpg" alt="" draggable="false" class="book-photo">
+                            </div>
+                            <div class="book-content">
+                                <div class="book-title">BIG MAGIC</div>
+                                <div class="book-author">by Elizabeth Gilbert</div>
+                                <div class="book-rate">
+                                    <fieldset class="rating">
+                                        <input type="checkbox" name="rating" id="bs-1-bc-2-star5" value="5">
+                                        <label for="bs-1-bc-2-star5" class="full">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-2-star4" value="4">
+                                        <label for="bs-1-bc-2-star4" class="4">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-2-star3" value="3">
+                                        <label for="bs-1-bc-2-star3" class="3">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-2-star2" value="2">
+                                        <label for="bs-1-bc-2-star2" class="2">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-2-star1" value="1">
+                                        <label for="bs-1-bc-2-star1" class="1">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                    </fieldset>
+                                    <span class="book-votes">1.987 voters</span>
+                                </div>
+                                <span class="book-sum">Readers of all ages and walks of life have drawn inspiration and empowerment from Elizabeth Gilbert’s books for years.</span>
+                                <div class="book-see">
+                                    <span>See The Book</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-cell" id="bs-1-bc-3" style="--background-book-cell: #edb9d6">
+                            <div class="book-img">
+                                <img src="./assets/img/books/bigMagic.jpg" alt="" draggable="false" class="book-photo">
+                            </div>
+                            <div class="book-content">
+                                <div class="book-title">BIG MAGIC</div>
+                                <div class="book-author">by Elizabeth Gilbert</div>
+                                <div class="book-rate">
+                                    <fieldset class="rating">
+                                        <input type="checkbox" name="rating" id="bs-1-bc-3-star5" value="5">
+                                        <label for="bs-1-bc-3-star5" class="full">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-3-star4" value="4">
+                                        <label for="bs-1-bc-3-star4" class="4">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-3-star3" value="3">
+                                        <label for="bs-1-bc-3-star3" class="3">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-3-star2" value="2">
+                                        <label for="bs-1-bc-3-star2" class="2">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-3-star1" value="1">
+                                        <label for="bs-1-bc-3-star1" class="1">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                    </fieldset>
+                                    <span class="book-votes">1.987 voters</span>
+                                </div>
+                                <span class="book-sum">Readers of all ages and walks of life have drawn inspiration and empowerment from Elizabeth Gilbert’s books for years.</span>
+                                <div class="book-see">
+                                    <span>See The Book</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-cell" id="bs-1-bc-4" style="--background-book-cell: #fdca95">
+                            <div class="book-img">
+                                <img src="./assets/img/books/bigMagic.jpg" alt="" draggable="false" class="book-photo">
+                            </div>
+                            <div class="book-content">
+                                <div class="book-title">BIG MAGIC</div>
+                                <div class="book-author">by Elizabeth Gilbert</div>
+                                <div class="book-rate">
+                                    <fieldset class="rating">
+                                        <input type="checkbox" name="rating" id="bs-1-bc-4-star5" value="5">
+                                        <label for="bs-1-bc-4-star5" class="full">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-4-star4" value="4">
+                                        <label for="bs-1-bc-4-star4" class="4">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-4-star3" value="3">
+                                        <label for="bs-1-bc-4-star3" class="3">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-4-star2" value="2">
+                                        <label for="bs-1-bc-4-star2" class="2">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-4-star1" value="1">
+                                        <label for="bs-1-bc-4-star1" class="1">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                    </fieldset>
+                                    <span class="book-votes">1.987 voters</span>
+                                </div>
+                                <span class="book-sum">Readers of all ages and walks of life have drawn inspiration and empowerment from Elizabeth Gilbert’s books for years.</span>
+                                <div class="book-see">
+                                    <span>See The Book</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-cell" id="bs-1-bc-5" style="--background-book-cell: #cbb5e2">
+                            <div class="book-img">
+                                <img src="./assets/img/books/bigMagic.jpg" alt="" draggable="false" class="book-photo">
+                            </div>
+                            <div class="book-content">
+                                <div class="book-title">BIG MAGIC</div>
+                                <div class="book-author">by Elizabeth Gilbert</div>
+                                <div class="book-rate">
+                                    <fieldset class="rating">
+                                        <input type="checkbox" name="rating" id="bs-1-bc-5-star5" value="5">
+                                        <label for="bs-1-bc-5-star5" class="full">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-5-star4" value="4">
+                                        <label for="bs-1-bc-5-star4" class="4">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-5-star3" value="3">
+                                        <label for="bs-1-bc-5-star3" class="3">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-5-star2" value="2">
+                                        <label for="bs-1-bc-5-star2" class="2">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bs-1-bc-5-star1" value="1">
+                                        <label for="bs-1-bc-5-star1" class="1">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                    </fieldset>
+                                    <span class="book-votes">1.987 voters</span>
+                                </div>
+                                <span class="book-sum">Readers of all ages and walks of life have drawn inspiration and empowerment from Elizabeth Gilbert’s books for years.</span>
+                                <div class="book-see">
+                                    <span>See The Book</span>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <ol class="flickity-page-dots" style="display: none">
+                    <li class="dot is-selected"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                </ol>
+                <button class="flickity-prev-next-button previous">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+                </button>
+                <button class="flickity-prev-next-button next">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="left-side">
+                <div class="top-list author-of-week">
+                    <span class="title">Author of the week</span>
+                    <ul class="author-list">
+                        <li class="author-item">
+                            <div class="author-avatar">
+                                <img src="./assets/img/author/Sebastian Jeremy.jpg" alt="">
+                            </div>
+                            <span class="author-name">Sebastian Jeremy</span>
+                        </li>
+                        <li class="author-item">
+                            <div class="author-avatar">
+                                <img src="./assets/img/author/Sebastian Jeremy.jpg" alt="">
+                            </div>
+                            <span class="author-name">Sebastian Jeremy</span>
+                        </li>
+                        <li class="author-item">
+                            <div class="author-avatar">
+                                <img src="./assets/img/author/Sebastian Jeremy.jpg" alt="">
+                            </div>
+                            <span class="author-name">Sebastian Jeremy</span>
+                        </li>
+                        <li class="author-item">
+                            <div class="author-avatar">
+                                <img src="./assets/img/author/Sebastian Jeremy.jpg" alt="">
+                            </div>
+                            <span class="author-name">Sebastian Jeremy</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-list book-of-year">
+                    <span class="title">Author of the week</span>
+                    <ul class="book-list">
+                        <!-- <li class="book-item">
+                            <div class="book-img">
+                                <img src="./assets/img/books/Disappearing Earth.jpg" alt="">
+                            </div>
+                            <div class="book-infor">
+                                <span class="book-name">Disappearing Earth</span>
+                                <span class="book-author">by Julia Phillips</span>
+                            </div>
+                        </li>
+                        <li class="book-item">
+                            <div class="book-img">
+                                <img src="./assets/img/books/Disappearing Earth.jpg" alt="">
+                            </div>
+                            <div class="book-infor">
+                                <span class="book-name">Disappearing Earth</span>
+                                <span class="book-author">by Julia Phillips</span>
+                            </div>
+                        </li>
+                        <li class="book-item">
+                            <div class="book-img">
+                                <img src="./assets/img/books/Disappearing Earth.jpg" alt="">
+                            </div>
+                            <div class="book-infor">
+                                <span class="book-name">Disappearing Earth</span>
+                                <span class="book-author">by Julia Phillips</span>
+                            </div>
+                        </li>
+                        <li class="book-item">
+                            <div class="book-img">
+                                <img src="./assets/img/books/Disappearing Earth.jpg" alt="">
+                            </div>
+                            <div class="book-infor">
+                                <span class="book-name">Disappearing Earth</span>
+                                <span class="book-author">by Julia Phillips</span>
+                            </div>
+                        </li>
+                        <li class="book-item">
+                            <div class="book-img">
+                                <img src="./assets/img/books/Disappearing Earth.jpg" alt="">
+                            </div>
+                            <div class="book-infor">
+                                <span class="book-name">Disappearing Earth</span>
+                                <span class="book-author">by Julia Phillips</span>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <div class="content-container">
+                <div class="content__header">
+                    <span class="title">Popular by Genre</span>
+                    <div class="filter">
+                        <span class="filter-item active">All Genres</span>
+                        <span class="filter-item">Business</span>
+                        <span class="filter-item">Science</span>
+                        <span class="filter-item">Fiction</span>
+                        <span class="filter-item">Philosophy</span>
+                        <span class="filter-item">Biography</span>
+                    </div>
+                </div>
+                <div class="content__book-list" id="bl-1">
+                    <!-- <div class="content__book-item" id="bl-1-bi-1">
+                        <div class="book-more-btn">
+                            <div class="three-dots"></div>
+                        </div>
+                        <div class="book-content">
+                            <div class="book-img">
+                                <img src="./assets/img/books/Changes Are.jpg" alt="">
+                            </div>
+                            <div class="book-infor">
+                                <span class="book-name">Changes Are</span>
+                                <span class="book-author">by Richard Russo</span>
+                                <div class="book-rate">
+                                    <fieldset class="rating">
+                                        <input type="checkbox" name="rating" id="bl-1-bi-1-star5" value="5">
+                                        <label for="bl-1-bi-1-star5" class="full">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-1-star4" value="4">
+                                        <label for="bl-1-bi-1-star4" class="4">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-1-star3" value="3">
+                                        <label for="bl-1-bi-1-star3" class="3">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-1-star2" value="2">
+                                        <label for="bl-1-bi-1-star2" class="2">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-1-star1" value="1">
+                                        <label for="bl-1-bi-1-star1" class="1">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                    </fieldset>
+                                    <span class="book-votes">1.987 voters</span>
+                                </div>
+                                <span class="book-sum">Readers of all ages and walks of life have drawn inspiration and empowerment from Elizabeth Gilbert’s books for years.</span>
+                            </div>
+                        </div>
+                        <div class="book-footer">
+                            <div class="liked-users-avatar">
+                                <div class="liked-user-img">
+                                    <img src="./assets/img/account/avatar/63.jpg" alt="">
+                                </div>
+                                <div class="liked-user-img">
+                                    <img src="./assets/img/account/avatar/noplz47r59v1uxvyg8ku.png" alt="">
+                                </div>
+                                <div class="liked-user-img">
+                                    <img src="./assets/img/account/avatar/photo-1535713875002-d1d0cf377fde.jpg" alt="">
+                                </div>
+                            </div>
+                            <span class="description"><strong>Samantha William</strong> and <strong>2 other friends</strong> like this</span>
+                        </div>
+                    </div>
+                    <div class="content__book-item" id="bl-1-bi-2">
+                        <div class="book-more-btn">
+                            <div class="three-dots"></div>
+                        </div>
+                        <div class="book-content">
+                            <div class="book-img">
+                                <img src="./assets/img/books/Changes Are.jpg" alt="">
+                            </div>
+                            <div class="book-infor">
+                                <span class="book-name">Changes Are</span>
+                                <span class="book-author">by Richard Russo</span>
+                                <div class="book-rate">
+                                    <fieldset class="rating">
+                                        <input type="checkbox" name="rating" id="bl-1-bi-2-star5" value="5">
+                                        <label for="bl-1-bi-2-star5" class="full">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-2-star4" value="4">
+                                        <label for="bl-1-bi-2-star4" class="4">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-2-star3" value="3">
+                                        <label for="bl-1-bi-2-star3" class="3">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-2-star2" value="2">
+                                        <label for="bl-1-bi-2-star2" class="2">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-2-star1" value="1">
+                                        <label for="bl-1-bi-2-star1" class="1">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                    </fieldset>
+                                    <span class="book-votes">1.987 voters</span>
+                                </div>
+                                <span class="book-sum">Readers of all ages and walks of life have drawn inspiration and empowerment from Elizabeth Gilbert’s books for years.</span>
+                            </div>
+                        </div>
+                        <div class="book-footer">
+                            <div class="liked-users-avatar">
+                                <div class="liked-user-img">
+                                    <img src="./assets/img/account/avatar/63.jpg" alt="">
+                                </div>
+                                <div class="liked-user-img">
+                                    <img src="./assets/img/account/avatar/noplz47r59v1uxvyg8ku.png" alt="">
+                                </div>
+                                <div class="liked-user-img">
+                                    <img src="./assets/img/account/avatar/photo-1535713875002-d1d0cf377fde.jpg" alt="">
+                                </div>
+                            </div>
+                            <span class="description"><strong>Samantha William</strong> and <strong>2 other friends</strong> like this</span>
+                        </div>
+                    </div>
+                    <div class="content__book-item" id="bl-1-bi-3">
+                        <div class="book-more-btn">
+                            <div class="three-dots"></div>
+                        </div>
+                        <div class="book-content">
+                            <div class="book-img">
+                                <img src="./assets/img/books/Changes Are.jpg" alt="">
+                            </div>
+                            <div class="book-infor">
+                                <span class="book-name">Changes Are</span>
+                                <span class="book-author">by Richard Russo</span>
+                                <div class="book-rate">
+                                    <fieldset class="rating">
+                                        <input type="checkbox" name="rating" id="bl-1-bi-3-star5" value="5">
+                                        <label for="bl-1-bi-3-star5" class="full">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-3-star4" value="4">
+                                        <label for="bl-1-bi-3-star4" class="4">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-3-star3" value="3">
+                                        <label for="bl-1-bi-3-star3" class="3">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-3-star2" value="2">
+                                        <label for="bl-1-bi-3-star2" class="2">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-3-star1" value="1">
+                                        <label for="bl-1-bi-3-star1" class="1">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                    </fieldset>
+                                    <span class="book-votes">1.987 voters</span>
+                                </div>
+                                <span class="book-sum">Readers of all ages and walks of life have drawn inspiration and empowerment from Elizabeth Gilbert’s books for years.</span>
+                            </div>
+                        </div>
+                        <div class="book-footer">
+                            <div class="liked-users-avatar">
+                                <div class="liked-user-img">
+                                    <img src="./assets/img/account/avatar/63.jpg" alt="">
+                                </div>
+                                <div class="liked-user-img">
+                                    <img src="./assets/img/account/avatar/noplz47r59v1uxvyg8ku.png" alt="">
+                                </div>
+                                <div class="liked-user-img">
+                                    <img src="./assets/img/account/avatar/photo-1535713875002-d1d0cf377fde.jpg" alt="">
+                                </div>
+                            </div>
+                            <span class="description"><strong>Samantha William</strong> and <strong>2 other friends</strong> like this</span>
+                        </div>
+                    </div>
+                    <div class="content__book-item" id="bl-1-bi-4">
+                        <div class="book-more-btn">
+                            <div class="three-dots"></div>
+                        </div>
+                        <div class="book-content">
+                            <div class="book-img">
+                                <img src="./assets/img/books/Changes Are.jpg" alt="">
+                            </div>
+                            <div class="book-infor">
+                                <span class="book-name">Changes Are</span>
+                                <span class="book-author">by Richard Russo</span>
+                                <div class="book-rate">
+                                    <fieldset class="rating">
+                                        <input type="checkbox" name="rating" id="bl-1-bi-4-star5" value="5">
+                                        <label for="bl-1-bi-4-star5" class="full">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-4-star4" value="4">
+                                        <label for="bl-1-bi-4-star4" class="4">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-4-star3" value="3">
+                                        <label for="bl-1-bi-4-star3" class="3">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-4-star2" value="2">
+                                        <label for="bl-1-bi-4-star2" class="2">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-4-star1" value="1">
+                                        <label for="bl-1-bi-4-star1" class="1">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                    </fieldset>
+                                    <span class="book-votes">1.987 voters</span>
+                                </div>
+                                <span class="book-sum">Readers of all ages and walks of life have drawn inspiration and empowerment from Elizabeth Gilbert’s books for years.</span>
+                            </div>
+                        </div>
+                        <div class="book-footer">
+                            <div class="liked-users-avatar">
+                                <div class="liked-user-img">
+                                    <img src="./assets/img/account/avatar/63.jpg" alt="">
+                                </div>
+                                <div class="liked-user-img">
+                                    <img src="./assets/img/account/avatar/noplz47r59v1uxvyg8ku.png" alt="">
+                                </div>
+                                <div class="liked-user-img">
+                                    <img src="./assets/img/account/avatar/photo-1535713875002-d1d0cf377fde.jpg" alt="">
+                                </div>
+                            </div>
+                            <span class="description"><strong>Samantha William</strong> and <strong>2 other friends</strong> like this</span>
+                        </div>
+                    </div>
+                    <div class="content__book-item" id="bl-1-bi-5">
+                        <div class="book-more-btn">
+                            <div class="three-dots"></div>
+                        </div>
+                        <div class="book-content">
+                            <div class="book-img">
+                                <img src="./assets/img/books/Changes Are.jpg" alt="">
+                            </div>
+                            <div class="book-infor">
+                                <span class="book-name">Changes Are</span>
+                                <span class="book-author">by Richard Russo</span>
+                                <div class="book-rate">
+                                    <fieldset class="rating">
+                                        <input type="checkbox" name="rating" id="bl-1-bi-5-star5" value="5">
+                                        <label for="bl-1-bi-5-star5" class="full">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-5-star4" value="4">
+                                        <label for="bl-1-bi-5-star4" class="4">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-5-star3" value="3">
+                                        <label for="bl-1-bi-5-star3" class="3">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-5-star2" value="2">
+                                        <label for="bl-1-bi-5-star2" class="2">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-5-star1" value="1">
+                                        <label for="bl-1-bi-5-star1" class="1">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                    </fieldset>
+                                    <span class="book-votes">1.987 voters</span>
+                                </div>
+                                <span class="book-sum">Readers of all ages and walks of life have drawn inspiration and empowerment from Elizabeth Gilbert’s books for years.</span>
+                            </div>
+                        </div>
+                        <div class="book-footer">
+                            <div class="liked-users-avatar">
+                                <div class="liked-user-img">
+                                    <img src="./assets/img/account/avatar/63.jpg" alt="">
+                                </div>
+                                <div class="liked-user-img">
+                                    <img src="./assets/img/account/avatar/noplz47r59v1uxvyg8ku.png" alt="">
+                                </div>
+                                <div class="liked-user-img">
+                                    <img src="./assets/img/account/avatar/photo-1535713875002-d1d0cf377fde.jpg" alt="">
+                                </div>
+                            </div>
+                            <span class="description"><strong>Samantha William</strong> and <strong>2 other friends</strong> like this</span>
+                        </div>
+                    </div>
+                    <div class="content__book-item" id="bl-1-bi-6">
+                        <div class="book-more-btn">
+                            <div class="three-dots"></div>
+                        </div>
+                        <div class="book-content">
+                            <div class="book-img">
+                                <img src="./assets/img/books/Changes Are.jpg" alt="">
+                            </div>
+                            <div class="book-infor">
+                                <span class="book-name">Changes Are</span>
+                                <span class="book-author">by Richard Russo</span>
+                                <div class="book-rate">
+                                    <fieldset class="rating">
+                                        <input type="checkbox" name="rating" id="bl-1-bi-6-star5" value="5">
+                                        <label for="bl-1-bi-6-star5" class="full">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-6-star4" value="4">
+                                        <label for="bl-1-bi-6-star4" class="4">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-6-star3" value="3">
+                                        <label for="bl-1-bi-6-star3" class="3">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-6-star2" value="2">
+                                        <label for="bl-1-bi-6-star2" class="2">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        <input type="checkbox" name="rating" id="bl-1-bi-6-star1" value="1">
+                                        <label for="bl-1-bi-6-star1" class="1">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                    </fieldset>
+                                    <span class="book-votes">1.987 voters</span>
+                                </div>
+                                <span class="book-sum">Readers of all ages and walks of life have drawn inspiration and empowerment from Elizabeth Gilbert’s books for years.</span>
+                            </div>
+                        </div>
+                        <div class="book-footer">
+                            <div class="liked-users-avatar">
+                                <div class="liked-user-img">
+                                    <img src="./assets/img/account/avatar/63.jpg" alt="">
+                                </div>
+                                <div class="liked-user-img">
+                                    <img src="./assets/img/account/avatar/noplz47r59v1uxvyg8ku.png" alt="">
+                                </div>
+                                <div class="liked-user-img">
+                                    <img src="./assets/img/account/avatar/photo-1535713875002-d1d0cf377fde.jpg" alt="">
+                                </div>
+                            </div>
+                            <span class="description"><strong>Samantha William</strong> and <strong>2 other friends</strong> like this</span>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/main.js" type="module"></script>
+</body>
+</html>
